@@ -2,7 +2,15 @@
   "name": "monsters-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vimalraveendra.github.io/monsters",
   "dependencies": {
+<<<<<<< HEAD
+    "gh-pages": "^3.1.0",
+    "node-fetch": "^2.6.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+=======
     "gh-pages": "^2.1.1",
     "immer": "^8.0.1",
     "lodash": "^4.17.19",
@@ -12,12 +20,15 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",
+>>>>>>> 1012ccb419e8fc543911b085074815c97d0580a9
     "websocket-extensions": "^0.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -37,8 +48,13 @@
   },
   "devDependencies": {
     "enzyme": "^3.11.0",
+<<<<<<< HEAD
+    "enzyme-adapter-react-16": "^1.15.6",
+    "fetch-mock": "^9.11.0"
+=======
     "enzyme-adapter-react-16": "^1.15.2",
     "fetch-mock": "^9.3.1",
     "node-fetch": "^2.6.1"
+>>>>>>> 1012ccb419e8fc543911b085074815c97d0580a9
   }
 }

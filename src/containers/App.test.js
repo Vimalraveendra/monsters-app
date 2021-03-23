@@ -32,25 +32,37 @@ describe("handleChange", () => {
   });
 });
 
-// describe("fetchAPI", () => {
-//   it("should call fetchApi to get the monsters", async () => {
-//     const mockProps = {
-//       monsters: [
-//         {
-//           id: 123,
-//           name: "hello",
-//           email: "hello@gmail.com",
-//         },
-//       ],
-//     };
+describe("fetchAPI", () => {
+  it("should call fetchApi to get the monsters", async () => {
+    fetch = jest.fn().mockReturnValue(
+      Promise.resolve({
+        data:[{monsters: [
+          {
+            id: 123,
+            name: "hello",
+            email: "hello@gmail.com",
+          },
+        ],
+      }]
+      })
+    )
+    const mockResult= {
+      monsters: [
+        {
+          id: 123,
+          name: "hello",
+          email: "hello@gmail.com",
+        },
+      ],
+    };
 
-//     fetchMock
-//       .getOnce("https://jsonplaceholder.typicode.com/users", mockProps)
-//       .then(() => {
-//         expect(wrapper.state()).toEqual("hello");
-//       });
-//   });
-// });
+  //   fetchMock
+  //     .getOnce("https://jsonplaceholder.typicode.com/users",{ body:mockProps,status:200})
+  //     .then(() => {
+  //       expect(wrapper.state()).toEqual("hello");
+  //     });
+  // });
+});
 
 // describe("fetchAPI", () => {
 //   it("should call fetchApi to get the monsters", async () => {
